@@ -1,0 +1,333 @@
+body {
+    background-color: #050a1a;
+    color: white; /* Changes text color to white for better contrast */
+    font-family: Arial, sans-serif; /* Sets a modern font for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    min-height: 100vh; /* Makes the body take up the full viewport height */
+}
+
+hr 
+{
+    border:solid 1px #e175647c;
+    width: 100%;
+    padding: 0;
+
+}
+
+
+.topbar
+{
+    background-color: #050a1a;
+    position: fixed;
+    max-height: 100px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.main
+{
+    padding-top: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo 
+{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+   
+}
+.logo img 
+{
+    padding: 2px;
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.topbuttons 
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    
+    
+}
+
+.topbuttons button {
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  background-color: #872341;
+  margin: 20px;
+
+  /* Fix: Add duration for the transition */
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.topbuttons button:hover {
+  font-size: 0.9rem;
+
+  /* Fix: Remove unnecessary parentheses around scale */
+  transform: scale(1.2);
+}
+
+.config
+{
+  display: flex;
+  border: solid 2px #872341;
+  width: 50%;
+  height: auto;
+  flex-direction: column;
+  margin: 5px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.appelement 
+{
+  display: flex;
+  flex-direction: column;
+  min-width: 90%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+#appContainer
+{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin: 5px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.app
+{
+    width: 100%;
+    background-color: transparent;
+    height: 75px;
+    margin: 5px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position:relative;
+}
+
+.app img
+{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.appelement:hover
+{
+    background-color: #87234144;
+}
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  
+  input:checked + .slider {
+    background-color: #E17564;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #E17564;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+  /* From Uiverse.io by alexruix */ 
+.input-group {
+  position: relative;
+  width: 100%;
+  margin: 7px;
+  left: 2.5%;
+ }
+ 
+ .input {
+  border: solid 2px #e175647c;
+  border-radius: 1rem;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+  width: 90%;
+ }
+ 
+ .user-label {
+  position: absolute;
+  left: 15px;
+  color: #e175647c;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4,0,0.2,1);
+ }
+ 
+ .input:focus, input:valid {
+  outline: none;
+  border: 2px solid #E17564;
+ }
+ 
+ .input:focus ~ label, input:valid ~ label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: #212121;
+  padding: 0 .2em;
+  color: #E17564;
+ }
+
+
+ 
+/* Shared Styles for Notification */
+.notification {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s ease;
+  position: fixed;
+  top: 90%; /* Set position at the top */
+  left: 100%;
+  transform: translateX(0%) ;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+/* Notification Icons */
+.notification__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.notification__icon path {
+  fill: #393A37;
+}
+
+/* Notification Title */
+.notification__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #393A37;
+}
+
+/* Close Button */
+.notification__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.notification__close path {
+  fill: #393A37;
+}
+
+/* Specific Styles for Success, Warning, and Alert */
+.success {
+  background: #84D65A;
+}
+
+.warning {
+  background: #FF9800;
+}
+
+.alert {
+  background: #f44336;
+}
+
+/* Show Animation */
+.notification.show {
+  opacity: 1;
+  transform: translateX(-120%) 
+}
