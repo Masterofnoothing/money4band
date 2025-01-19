@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money4band</title>
+    <link rel="stylesheet" href="static/onbording.css">
+    <link rel="icon" type="image/x-icon" href="/static/M4B_logo_small.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section id="section1">
+        <div class="content">
+            <h1>You seem new here, let's get you started</h1>
+            <button class="cssbuttons-io-button" onclick="scrollToNextSection('section2')"> Get started
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="content">
+            <h1>Welcome to the next section</h1>
+            <button class="cssbuttons-io-button" onclick="scrollToNextSection('section3')"> Get started
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </section>
+
+
+    <section id="section3">
+        <div class="content">
+            <h1>Proxies??</h1>
+            <button class="cssbuttons-io-button" onclick="scrollToNextSection('section4')"> Get started
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="content">
+            <h1>Setup Complete.........</h1>
+            <h2>Hope you earn well ;)</h2>
+        </div>
+    </section>
+    <script>
+        function scrollToNextSection(section) {
+            const nextSection = document.getElementById(section);
+            nextSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        scrollToNextSection("section1")
+    </script>
+</body>
+</html>

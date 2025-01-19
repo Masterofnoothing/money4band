@@ -75,18 +75,21 @@ hr
   border-radius: 25px;
   border: none;
   color: #fff;
-  background-color: #872341;
+  background-color: transparent;
   margin: 20px;
+
+  border: solid 2px #E17564;
 
   /* Fix: Add duration for the transition */
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .topbuttons button:hover {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 
   /* Fix: Remove unnecessary parentheses around scale */
-  transform: scale(1.2);
+  transform: scale(1.15);
+  background-color: #E17564;
 }
 
 .config

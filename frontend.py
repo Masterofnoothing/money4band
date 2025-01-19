@@ -12,6 +12,9 @@ CORS(app)
 def home():
     return render_template('main.html')
 
+@app.route('/onbording')
+def onbording():
+    return render_template('onbording.html')
 
 @app.route('/save', methods=['POST'])
 def save():
