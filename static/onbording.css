@@ -31,6 +31,13 @@ section {
 
 }
 
+.content h3
+{
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+
 
 /* From Uiverse.io by JaydipPrajapati1910 */ 
 .cssbuttons-io-button {
@@ -52,6 +59,7 @@ section {
     height: 5em;
     padding-right: 3.3em;
     width: 13.2em;
+    margin: 20px;
   }
   
   .cssbuttons-io-button .icon {
@@ -87,3 +95,153 @@ section {
     transform: scale(0.95);
   }
   
+
+
+/* From Uiverse.io by bociKond */ 
+.form {
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #E17564;
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form .input-span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+}
+
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+  outline: 2px solid var(--clr);
+}
+
+.label {
+  align-self: flex-start;
+  color: var(--clr);
+  font-weight: 600;
+}
+
+.form .submit {
+  padding: 1rem 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form .submit:hover {
+  background-color: var(--clr);
+  color: var(--bg-dark);
+}
+
+.span {
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+.span a {
+  color: var(--clr);
+}
+
+.message {
+  color: #355891;
+  font-size: 14px;
+}
+
+/* Shared Styles for Notification */
+.notification {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s ease;
+  position: fixed;
+  top: 90%; /* Set position at the top */
+  left: 100%;
+  transform: translateX(0%) ;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+/* Notification Icons */
+.notification__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.notification__icon path {
+  fill: #393A37;
+}
+
+/* Notification Title */
+.notification__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #393A37;
+}
+
+/* Close Button */
+.notification__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.notification__close path {
+  fill: #393A37;
+}
+
+/* Specific Styles for Success, Warning, and Alert */
+.success {
+  background: #84D65A;
+}
+
+.warning {
+  background: #FF9800;
+}
+
+.alert {
+  background: #f44336;
+}
+
+/* Show Animation */
+.notification.show {
+  opacity: 1;
+  transform: translateX(-120%) 
+}

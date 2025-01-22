@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Enable CORS for all routes
 CORS(app)
 
-@app.route('/')
+@app.route('/apps')
 def home():
     return render_template('main.html')
 
@@ -52,7 +52,9 @@ def supportedapps():
 def restart():
     pass
 
-
+@app.route('/install_docker')
+def install_docker():
+    pass
 
 
 
