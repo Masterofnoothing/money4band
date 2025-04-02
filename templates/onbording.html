@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money4band</title>
+    <link rel="stylesheet" href="static/onbording.css">
+    <link rel="icon" type="image/x-icon" href="/static/M4B_logo_small.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section id="section1">
+        <div class="content">
+            <h1>You seem new here, let's get you started</h1>
+            <button class="cssbuttons-io-button" onclick="scrollToNextSection('section2')"> Get started
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="content">
+            <h1>Welcome to the next section</h1>
+            <!-- From Uiverse.io by bociKond --> 
+            <form class="form">
+                <span class="input-span">
+                <label for="email" class="label">Email</label>
+                <input type="email" name="email" id="email"
+                /></span>
+                <span class="input-span">
+                <label for="password" class="label">Password</label>
+                <input type="password" name="password" id="password"
+                /></span>
+                <span class="span"><a href="#">Forgot password?</a></span>
+            </form>
+            
+            <button class="cssbuttons-io-button" onclick="scrollToNextSection('section3')"> Get started
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </section>
+
+
+    <section id="section3">
+        <div class="content">
+            <h1>Do you want to install docker</h1>
+            <div class="buttons" style="display: flex; flex-direction: row;">
+
+                <button class="cssbuttons-io-button" onclick="scrollToNextSection('section4') ;createNotification('success','dockerwill be installed shortly')">Yes
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+                <button class="cssbuttons-io-button" onclick="scrollToNextSection('section4')">No 
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="content">
+            <h1>Setup Complete.........</h1>
+            <h3>Have a great day
+                Ohh wait we forgot to setup apps and proxies</h3>
+
+            <button class="cssbuttons-io-button" onclick=" window.location.href = window.location.origin + '/apps'">Alright 
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+
+
+    </section>
+    <script>
+        function scrollToNextSection(section) {
+            const nextSection = document.getElementById(section);
+            nextSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        scrollToNextSection("section1")
+
+
+        function createNotification(type, message) {
+    const types = ['success', 'warning', 'alert'];
+    
+    if (!types.includes(type)) {
+      console.error('Invalid type');
+      return;
+    }
+  
+    const notification = document.createElement('div');
+    notification.classList.add('notification', type);
+    
+    // Add icon based on type
+    const icon = document.createElement('div');
+    icon.classList.add('notification__icon');
+    icon.innerHTML = getIconForType(type);
+    
+    // Add title/message
+    const title = document.createElement('div');
+    title.classList.add('notification__title');
+    title.textContent = message;
+    
+    // Close button
+    const closeButton = document.createElement('div');
+    closeButton.classList.add('notification__close');
+    closeButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20"><path fill="#ffffff" d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"></path></svg>';
+    
+    // Append all elements to the notification
+    notification.appendChild(icon);
+    notification.appendChild(title);
+    notification.appendChild(closeButton);
+    
+    document.body.appendChild(notification);
+  
+    // Show the notification with slide-in effect
+    setTimeout(() => {
+      notification.classList.add('show');
+    }, 10);
+  
+    // Close the notification when the close button is clicked
+    closeButton.addEventListener('click', () => {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        notification.remove();
+      }, 500); // Wait for animation to complete before removing
+    });
+    
+    // Remove the notification after 5 seconds
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        notification.remove();
+      }, 500); // Wait for animation to complete before removing
+    }, 5000);
+  }
+
+  function getIconForType(type) {
+    switch(type) {
+      case 'success':
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"><path fill-rule="evenodd" fill="#ffffff" d="m12 1c-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11-4.925-11-11-11zm4.768 9.14c.0878-.1004.1546-.21726.1966-.34383.0419-.12657.0581-.26026.0477-.39319-.0105-.13293-.0475-.26242-.1087-.38085-.0613-.11844-.1456-.22342-.2481-.30879-.1024-.08536-.2209-.14938-.3484-.18828s-.2616-.0519-.3942-.03823c-.1327.01366-.2612.05372-.3782.1178-.1169.06409-.2198.15091-.3027.25537l-4.3 5.159-2.225-2.226c-.1886-.1822-.4412-.283-.7034-.2807s-.51301.1075-.69842.2929-.29058.4362-.29285.6984c-.00228.2622.09851.5148.28067.7034l3 3c.0983.0982.2159.1748.3454.2251.1295.0502.2681.0729.4069.0665.1387-.0063.2747-.0414.3991-.1032.1244-.0617.2347-.1487.3236-.2554z" clip-rule="evenodd"></path></svg>';
+      case 'warning':
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#ffffff" fill-rule="evenodd" d="M12 2a10 10 0 1 1-10 10A10.012 10.012 0 0 1 12 2zm0 18a8 8 0 1 0-8-8 8.009 8.009 0 0 0 8 8zM11 7h2v5h-2V7zm0 7h2v2h-2v-2z" clip-rule="evenodd"></path></svg>';
+      case 'alert':
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#ffffff" fill-rule="evenodd" d="M12 2a10 10 0 1 1-10 10A10.012 10.012 0 0 1 12 2zm0 18a8 8 0 1 0-8-8 8.009 8.009 0 0 0 8 8zM11 7h2v5h-2V7zm0 7h2v2h-2v-2z" clip-rule="evenodd"></path></svg>';
+      default:
+        return '';
+    }
+  }
+  
+    </script>
+</body>
+</html>
