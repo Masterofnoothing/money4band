@@ -138,7 +138,7 @@ flag_function_mapper = {
     'cid': configure_cid,
     'code': configure_code,
     'token': configure_token,
-    'manual': configure_manual
+    'manual': configure_manual,
 }
 
 
